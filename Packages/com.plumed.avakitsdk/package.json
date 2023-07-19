@@ -1,0 +1,13 @@
+{
+  "name": "com.plumed.avakitsdk",
+  "version": "0.0.1",
+  "displayName": "Avakit SDK",
+  "description": ".",
+  "dependencies": {
+    "com.vrmc.gltf": "1.4.0",
+    "com.vrmc.univrm": "0.112.0",
+    "com.vrmc.vrm": "0.112.0",
+    "com.vrmc.vrmshaders": "0.112.0",
+    "jp.lilxyzw.liltoon": "0.112.0"
+  }
+}
