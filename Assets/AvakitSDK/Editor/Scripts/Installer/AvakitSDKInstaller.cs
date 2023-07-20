@@ -15,7 +15,7 @@ namespace AvakitSDK.Installer
             ("com.vrmc.gltf", "https://github.com/vrm-c/UniVRM.git?path=/Assets/UniGLTF#v0.112.0", false),
             ("com.vrmc.univrm", "https://github.com/vrm-c/UniVRM.git?path=/Assets/VRM#v0.112.0", false),
             ("com.vrmc.vrm", "https://github.com/vrm-c/UniVRM.git?path=/Assets/VRM10#v0.112.0", false),
-            ("com.plumed.avakitsdk", "https://github.com/avatokapp/AvakitSDK.git", false)
+            ("com.plumed.avakitsdk", "https://github.com/avatokapp/AvakitSDK.git?path=Packages/com.plumed.avakitsdk#0.0.2", false)
         };
 
         private static AddRequest _request;
