@@ -1,6 +1,6 @@
 {
   "name": "com.plumed.avakitsdk",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "displayName": "Avakit SDK",
   "description": ".",
   "dependencies": {
