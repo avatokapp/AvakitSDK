@@ -1,0 +1,7 @@
+{
+  "name": "com.plumed.avakitsdkinstaller",
+  "version": "0.0.3",
+  "displayName": "Avakit SDK Installer",
+  "description": ".",
+  "dependencies": {}
+}

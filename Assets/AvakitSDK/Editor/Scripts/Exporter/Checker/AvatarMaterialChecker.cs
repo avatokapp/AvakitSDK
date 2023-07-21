@@ -40,7 +40,19 @@ namespace AvakitSDK.Exporter
                 _invalidMaterials.Clear();
                 foreach (var m in _materials)
                 {
-                    var gltfMaterial = SupportedShaderNames.Contains(m.shader.name) ? "valid" : "";
+                    var gltfMaterial = "";
+                    foreach (var groupName in SupportedShaderGroupNames)
+                    {
+                        if (m.shader.name.Contains(groupName))
+                        {
+                            gltfMaterial = "valid";
+                            break;
+                        }
+                    }
+                    if (string.IsNullOrEmpty(gltfMaterial) && SupportedShaderNames.Contains(m.shader.name))
+                    {
+                        gltfMaterial = "valid";
+                    }
                     if (string.IsNullOrEmpty(gltfMaterial))
                     {
                         _validations.Add((Validation.Error(Localization.NotSupportedMessage(m.shader.name), ValidationContext.Create(m)), m));
@@ -132,10 +144,6 @@ namespace AvakitSDK.Exporter
 
         private static readonly string[] SupportedShaderNames =
         {
-            // UniGLTF & VRM default shader
-            "UniGLTF/UniUnlit",
-            "VRM/MToon",
-            // "VRM10/MToon10",
             // Unity default shader
             "Standard",
             "Unlit/Color",
@@ -191,7 +199,15 @@ namespace AvakitSDK.Exporter
             "Legacy Shaders/Transparent/Specular",
             "Legacy Shaders/Transparent/VertexLit",
             "Legacy Shaders/VertexLit",
-            // URP shader
+        };
+
+        private static readonly string[] SupportedShaderGroupNames =
+        {
+            // UniGLTF & VRM default shader
+            "UniGLTF/UniUnlit",
+            "VRM/MToon",
+            // "VRM10/MToon10",
+            /* URP shaders
             "Universal Render Pipeline/2D/Sprite-Lit-Default",
             "Universal Render Pipeline/2D/Sprite-Mask",
             "Universal Render Pipeline/2D/Sprite-Unlit-Default",
@@ -201,8 +217,9 @@ namespace AvakitSDK.Exporter
             "Universal Render Pipeline/Baked Lit",
             "Universal Render Pipeline/Complex Lit",
             "Universal Render Pipeline/Simple Lit",
-            "Universal Render Pipeline/Unlit",
-            // lilToon shader
+            "Universal Render Pipeline/Unlit", */
+            "Universal Render Pipeline",
+            /* lilToon shaders
             "lilToon",
             "Hidden/lilToonCutout",
             "Hidden/lilToonCutoutOutline",
@@ -235,6 +252,11 @@ namespace AvakitSDK.Exporter
             "_lil/[Optional] lilToonTransparentOutlineOnly",
             "_lil/[Optional] lilToonOverlay",
             "_lil/[Optional] lilToonOverlayOnePass",
+            */
+            "lilToon",
+            /* UnlitWF shaders
+            */
+            "UnlitWF",
         };
         
         #endregion SupportedShader

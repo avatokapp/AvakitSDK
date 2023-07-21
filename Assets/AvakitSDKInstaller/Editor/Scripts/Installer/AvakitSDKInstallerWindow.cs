@@ -239,7 +239,7 @@ namespace AvakitSDK.Installer
             "UniGLTF - UniUnlit",
             "VRM - MToon",
             "lilToon",
-            "RealToon",
+            "UnlitWF",
             // "VRM10/MToon10",
             // Unity default shader
             "Unity - Standard",

@@ -1,17 +1,5 @@
 {
   "dependencies": {
-    "com.plumed.avakitsdk": {
-      "version": "file:com.plumed.avakitsdk",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {
-        "com.vrmc.gltf": "1.4.0",
-        "com.vrmc.univrm": "0.112.0",
-        "com.vrmc.vrm": "0.112.0",
-        "com.vrmc.vrmshaders": "0.112.0",
-        "jp.lilxyzw.liltoon": "0.112.0"
-      }
-    },
     "com.unity.collab-proxy": {
       "version": "1.15.16",
       "depth": 0,
