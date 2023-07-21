@@ -115,7 +115,11 @@ namespace AvakitSDK.Exporter
                 assetNames = new [] { _prefabPath },
                 addressableNames = new [] { AvakitAvatar.AssetName }
             };
+#if UNITY_EDITOR_WIN
             BuildPipeline.BuildAssetBundles(Application.temporaryCachePath, new [] { bundleBuild }, BuildAssetBundleOptions.None, BuildTarget.StandaloneOSX);
+#elif UNITY_EDITOR_OSX
+            BuildPipeline.BuildAssetBundles(Application.temporaryCachePath, new [] { bundleBuild }, BuildAssetBundleOptions.None, BuildTarget.StandaloneWindows);
+#endif
             DeleteFile(_saveFilePath);
             File.Move(Application.temporaryCachePath + "/" + _saveFileName, _saveFilePath);
         }

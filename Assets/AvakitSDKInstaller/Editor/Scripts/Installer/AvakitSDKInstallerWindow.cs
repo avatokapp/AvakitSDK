@@ -95,7 +95,6 @@ namespace AvakitSDK.Installer
                 GUILayout.BeginHorizontal();
                 GUILayout.FlexibleSpace();
 
-                Debug.Log(AvakitSDKInstaller.AllPackagesInstalled + " " + AvakitSDKInstaller.IsInstalling);
                 GUI.enabled = !(AvakitSDKInstaller.AllPackagesInstalled || AvakitSDKInstaller.IsInstalling);
                 if (GUILayout.Button(Localization.Words.InstallAll, GUILayout.MinWidth(100)))
                 {
