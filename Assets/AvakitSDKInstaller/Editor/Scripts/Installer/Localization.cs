@@ -8,7 +8,7 @@ namespace AvakitSDK.Installer
         {
             eng,
             kor,
-            jap,
+            jpn,
         }
 
         public static Languages Lang = Languages.eng;
@@ -17,7 +17,7 @@ namespace AvakitSDK.Installer
         {
             switch (Lang)
             {
-                case Languages.jap:
+                case Languages.jpn:
                     return $"必須項目。\"{name}\" を入力してください";
                 case Languages.eng:
                     return $"\"{name}\" is required";
@@ -32,7 +32,7 @@ namespace AvakitSDK.Installer
         {
             switch (Lang)
             {
-                case Languages.jap:
+                case Languages.jpn:
                     return $"\"{name}\" は無効なコンポーネントです";
                 case Languages.eng:
                     return $"\"{name}\" is invalid component";
@@ -47,7 +47,7 @@ namespace AvakitSDK.Installer
         {   
             switch (Lang)
             {
-                case Languages.jap:
+                case Languages.jpn:
                     return $"\"{name}\" はパフォーマンスを低下させる可能性があります";
                 case Languages.eng:
                     return $"\"{name}\" may degrade performance";
@@ -62,7 +62,7 @@ namespace AvakitSDK.Installer
         {
             switch (Lang)
             {
-                case Languages.jap:
+                case Languages.jpn:
                     return $"\"{name}\" はサポートされていません";
                 case Languages.eng:
                     return $"\"{name}\" is not supported";
